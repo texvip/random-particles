@@ -60,8 +60,8 @@ int main(int argc, char* argv[]) {
 
     // Output histogram
     for (auto h : hist_all) {
-        std::cout << h.first << ": " << h.second / static_cast<double>(t) << std::endl;
-        out_params << h.first << "\t" << h.second / static_cast<double>(t) << std::endl;
+        std::cout << h.first << ": " << h.second / static_cast<double>(t * n * n) << std::endl;
+        out_params << h.first << "\t" << h.second / static_cast<double>(t * n * n)<< std::endl;
     }
     out_params.close();
     return 0;
